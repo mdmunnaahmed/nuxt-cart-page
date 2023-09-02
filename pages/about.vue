@@ -1,13 +1,19 @@
 <template>
   <div class="mx-auto container">
-    
-      <h2>This is Home page</h2>
+    <h1>About Page</h1>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  setup () {
+    
+
+    return {}
+  }
+}
 </script>
 
 <style lang="scss" scoped>
+
 </style>

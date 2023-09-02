@@ -1,12 +1,15 @@
 <template>
   <div class="mx-auto container">
-    
-      <h2>This is Home page</h2>
+    <NuxtLayout :name="sidebar">
+      <h3>Profile</h3>
+    </NuxtLayout>
   </div>
 </template>
 
 <script>
-export default {};
+definePageMeta({
+  layout: "sidebar",
+});
 </script>
 
 <style lang="scss" scoped>
