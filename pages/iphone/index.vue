@@ -29,8 +29,8 @@ const iphones = [
   "iphone 14 pro max",
 ];
 
-const { data } = await useFetch("/api/iphones");
-const iphones2 = data.value;
+const { data } = await useFetch("/iphones");
+const iphones2 = data;
 
 console.log(iphones2);
 </script>
