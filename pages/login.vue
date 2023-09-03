@@ -45,16 +45,17 @@ async function formSubmit() {
 
   isLoading.value = false;
 
-  if (response.error.value.data.error) {
-    errorss = response.error.value.data.error;
+  const auth = useAuth();
+  auth.value.isAuth = true;
+  navigateTo("/iphone");
+
+  const token = response.data.value.token;
+  if (token) {
+    localStorage.setItem("token", token);
   }
 
-
-  console.log(response);
-  const token = response.data.value.token
-
-  if(token) {
-    localStorage.setItem("token", token);
+  if (response.error) {
+    errorss = response.error.value.data.error;
   }
 }
 </script>
